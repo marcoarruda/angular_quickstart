@@ -18,6 +18,7 @@ import { HeroService } from './hero.service';
     RouterModule.forRoot([
       { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
       { path: 'heroes', component: HeroesComponent },
+      { path: 'detail/:id', component: HeroDetailComponent },
       { path: 'dashboard', component: DashboardComponent }
     ])
   ],
@@ -28,7 +29,8 @@ import { HeroService } from './hero.service';
     HeroesComponent
   ],
   providers: [
-    HeroService
+    HeroService,
+    Location
   ],
   bootstrap: [AppComponent]
 })
